@@ -1,0 +1,52 @@
+spisok = [1, 2, 3, 4, 5, 123, 45, 896849, -1233, 0]
+def func1():
+    print("Max is", max(spisok), "\nMin is", min(spisok))
+    
+def func2():
+    print("Summary of all elements equals", sum(spisok))
+    
+def func3():
+    list1 = []
+    for i in range(len(spisok)):
+        if spisok[i] % 2 == 0:
+            list1.append(spisok[i])
+    print(list1)
+    
+def func4():
+    list2 = []
+    for i in range(len(spisok)):
+        if spisok[i] % 2 == 1:
+            list2.append(spisok[i])
+    print(list2)
+    
+def func5():
+    spisok.remove(spisok[0])
+    print(spisok)
+    
+def func6():
+    list3 = []
+    num1 = int(input("1st number: "))
+    num2 = int(input("2nd number: "))
+    for i in range(num1, num2 + 1):
+        list3.append(i)
+    print(list3)
+    
+while 1:
+    print(spisok)
+    print("Menu: \n1. Find max and min \n2. Summarize all elements \n3. Output only even elements \n4. Delete all even elements \n5. Reduce the list \n6. Fill the list with your numbers")
+    answer = int(input("Your answer: "))
+    if answer == 1:
+        func1()
+    elif answer == 2:
+        func2()
+    elif answer == 3:
+        func3()
+    elif answer == 4:
+        func4()
+    elif answer == 5:
+        func5()
+    elif answer == 6:
+        func6()
+    else:
+        print("Your answer doesnt match")
+    
